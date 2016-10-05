@@ -3,6 +3,9 @@
  */
 package challange;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Line {
 
     // private member data
@@ -23,6 +26,8 @@ public class Line {
         this.x1 = x1;
         this.y1 = y1;
     }
+
+    public Line() {}
 
     /**
      * Calculates the line's slope.

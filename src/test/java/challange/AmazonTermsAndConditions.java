@@ -53,12 +53,14 @@ public class AmazonTermsAndConditions {
     }
 
     private WebElement getRequiredElementByTextContent(String selector, String content){
+        WebElement element = null;
         List<WebElement> elements = driver.findElements(By.cssSelector(selector));
-        for(WebElement element : elements){
-            if (element.getText().equals(content)){
-                return element;
+        for(WebElement current : elements){
+            if(current.getText().equals(content)){
+                element = current;
             }
         }
-        return null;
+
+        return element;
     }
 }
